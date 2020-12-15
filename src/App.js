@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Search from "./components/Search/Search";
 
-function App() {
+import useStyles from "./styles";
+
+const App = () => {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CssBaseline />
+      <div className={classes.container}>
+        <Navbar />
+        <Search />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
